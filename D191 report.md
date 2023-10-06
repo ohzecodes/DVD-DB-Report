@@ -2,7 +2,8 @@
 JANUARY 11, 2023
 
 ## EER diagram for this project
-![EER diagram for the project](./images/EER-diagram.png)
+ 
+![EER diagram for the project](Images/EER-diagram.png)
 
 ## My Environment for this project
 
@@ -131,7 +132,7 @@ ORDER BY
 | New           | 438       | 502    |
 | Music         | 394       | 436    |
 
-![](./images/bar-graph.png)
+![](Images/bar-graph.png)
 
 
 #### Analysis of the data 
@@ -193,8 +194,8 @@ CREATE TABLE detailed (
 );
 ```
 
-![Confirmation of sucessful query](./images/Section-B1.png)
-![DATA](./images/Section-B2.png)
+![Confirmation of sucessful query](Images/Section-B1.png)
+![DATA](Images/Section-B2.png)
 
 ## Section C: Write a SQL query that will extract the raw data needed for the Detailed section of your report from the source database and verify the data’s accuracy.
 
@@ -215,8 +216,8 @@ GROUP BY Country,  category.name,  rental.rental_id,  inventory.inventory_id,  f
 film_category,  category.name,  country.country;
 ```
 
-![Confirmation of sucessful query](./images/Section-C1.png)
-![DATA](./images/Section-C2.png)
+![Confirmation of sucessful query](Images/Section-C1.png)
+![DATA](Images/Section-C2.png)
 
 
 ## Section D: Write code for function(s) that perform the transformation(s) you identified in Seciton A
@@ -231,8 +232,8 @@ $$ LANGUAGE SQL;
 SELECT convert_date(Rental_DATE) from detailed;
 
 ```
-![Confirmation of sucessful query](./images/Section-D1.png)
-![DATA](./images/Section-D2.png)
+![Confirmation of sucessful query](Images/Section-D1.png)
+![DATA](Images/Section-D2.png)
 
 ## Section E Trigger: Write a SQL code that creates a trigger on the detailed table of the report that will continually update the summary table as data is added to the detailed table. 
 ```sql 
@@ -263,7 +264,7 @@ CREATE OR REPLACE FUNCTION update_summary_table()
 
 ```
  
-![Confirmation of sucessful query](./images/Section-E1.png)
+![Confirmation of sucessful query](Images/Section-E1.png)
 
 ## Section F: Create a stored procedure that can be used to refresh the data in both your detailed and summary tables. The procedure should clear the contents of the detailed and summary tables and perform the ETL load process from part C and include comments that identify how often the stored procedure should be executed.
 
@@ -302,8 +303,8 @@ $$;
 
 ```
 
-![Confirmation of sucessful query](./images/Section-F1.png)
-![CALL](./images/Section-F2.png)
+![Confirmation of sucessful query](Images/Section-F1.png)
+![CALL](Images/Section-F2.png)
 
 ### F1. Running automatically: Explain how the stored procedure can be run on a schedule to ensure data freshness.
 In order to automatically execute the stored procedure once every 4 months we can use a tool called pg-agent.
